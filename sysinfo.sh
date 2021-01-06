@@ -5,6 +5,14 @@ echo -e "\e[31;43m***** HOSTNAME INFORMATION *****\e[0m"
 hostnamectl
 echo ""
 
+# CPU information:
+echo -e "\e[31;43m***** CPU INFORMATION *****\e[0m"
+lscpu | grep 'Architecture'
+lscpu | grep 'Byte order'
+lscpu | grep 'Vendor ID'
+lscpu | grep 'Model name'
+echo ""
+
 # File system disk space usage:
 echo -e "\e[31;43m***** FILE SYSTEM DISK SPACE USE *****\e[0m"
 df -h
